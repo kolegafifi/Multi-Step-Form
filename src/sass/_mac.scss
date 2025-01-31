@@ -190,6 +190,11 @@
 				font-size: 1.4rem;
 				color: $coolgray;
 			}
+			&__discount{
+				display: none;
+				font-size: 1.4rem;
+				color: $marineblue;
+			}
 		}
 		&__choose-payment {
 			width: 100%;
@@ -295,7 +300,7 @@
 		&__plan-summary {
 			display: flex;
 			flex-direction: column;
-			gap: 0.2em;
+			gap: 0.4em;
 			&__chosen-plan {
 				font-size: 1.8rem;
 				font-weight: 500;
@@ -305,6 +310,7 @@
 				font-size: 1.4rem;
 				color: $coolgray;
 				text-decoration: underline;
+				cursor: pointer;
 			}
 		}
 		&__summary-plan-price {
@@ -337,7 +343,7 @@
 			}
 		}
 		.active-service2 {
-			display: flex ;
+			display: flex;
 		}
 		&__summary-total {
 			display: flex;
@@ -345,11 +351,11 @@
 			align-items: center;
 			padding-inline: 2em;
 			&__p {
-				font-size: 1.4rem;
+				font-size: 1.5rem;
 				color: $coolgray;
 			}
 			&__total-payment {
-				font-size: 2rem;
+				font-size: 2.2rem;
 				color: $purplishblue;
 				font-weight: 500;
 			}
@@ -402,7 +408,7 @@
 	.yearly2 {
 		animation: yearly 0.3s forwards;
 	}
-	.picked-plan2{
+	.picked-plan2 {
 		border: 2px solid $marineblue;
 		background-color: $magnolia;
 	}

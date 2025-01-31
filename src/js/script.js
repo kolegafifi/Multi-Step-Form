@@ -124,6 +124,8 @@ const slider = document.querySelector('.form__payment-options__slider')
 const sliderBall = document.querySelector('.form__payment-options__slider__ball')
 const paymentOptions = document.querySelectorAll('.form__payment-options__option')
 
+const discountsMobile = document.querySelectorAll('.form__plan-text__discount')
+
 const planPrices = document.querySelectorAll('.form__plan-text__price')
 
 const plans = document.querySelectorAll('.form__plan')
@@ -141,15 +143,22 @@ const handleSlider = () => {
 		sliderBall.classList.remove('yearly')
 	}
 }
+
 const handlePlanPrices = () => {
 	if (sliderBall.classList.contains('monthly')) {
 		planPrices[0].textContent = '$9/mo'
 		planPrices[1].textContent = '$12/mo'
 		planPrices[2].textContent = '$15/mo'
+		discountsMobile.forEach(item => {
+			item.style.display = 'none'
+		})
 	} else if (sliderBall.classList.contains('yearly')) {
 		planPrices[0].textContent = '$90/yr'
 		planPrices[1].textContent = '$120/yr'
 		planPrices[2].textContent = '$150/yr'
+		discountsMobile.forEach(item => {
+			item.style.display = 'inline-block'
+		})
 	}
 }
 plans.forEach(plan => {
@@ -315,6 +324,13 @@ const handleTotal = () => {
 		summaryTotalPrice.textContent = `$${payment}/yr`
 	}
 }
+
+changeBtn.addEventListener('click', () => {
+	slideNumber = 1
+	mobileForms.forEach(form => form.classList.remove('show-slide'))
+	mobileForms[1].classList.add('show-slide')
+	handleProgress()
+})
 
 mobileForwardBtn.addEventListener('click', e => {
 	e.preventDefault()

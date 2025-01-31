@@ -82,7 +82,7 @@ const handleMovingBackwards2 = () => {
 		desktopForms[slideNumber2].classList.add('show-slide')
 		desktopBackBtn.classList.add('hided')
 	}
-    if (slideNumber2 == 3) {
+	if (slideNumber2 == 3) {
 		desktopForwardBtn.textContent = 'Confirm'
 	} else {
 		desktopForwardBtn.textContent = 'Next Step'
@@ -136,6 +136,8 @@ const planPrices2 = document.querySelectorAll('.desktop-form__plans-box__price')
 
 const plans2 = document.querySelectorAll('.desktop-form__plans-box')
 
+const desktopDiscounts = document.querySelectorAll('.desktop-form__plans-box__discount')
+
 const handleSlider2 = () => {
 	if (paymentOptions2[0].classList.contains('active-option')) {
 		paymentOptions2.forEach(option => option.classList.remove('active-option'))
@@ -154,10 +156,16 @@ const handlePlanPrices2 = () => {
 		planPrices2[0].textContent = '$9/mo'
 		planPrices2[1].textContent = '$12/mo'
 		planPrices2[2].textContent = '$15/mo'
+        desktopDiscounts.forEach(item => {
+            item.style.display = 'none'
+        })
 	} else if (sliderBall2.classList.contains('yearly2')) {
 		planPrices2[0].textContent = '$90/yr'
 		planPrices2[1].textContent = '$120/yr'
 		planPrices2[2].textContent = '$150/yr'
+        desktopDiscounts.forEach(item => {
+            item.style.display = 'inline-block'
+        })
 	}
 }
 plans2.forEach(plan => {
@@ -273,6 +281,7 @@ const handlePlanSummary2 = () => {
 			payment2 = 15
 			planPrice2.textContent = '$15/mo'
 		}
+
 	}
 	if (sliderBall2.classList.contains('yearly2')) {
 		if (plans2[0].classList.contains('picked-plan2')) {
@@ -324,6 +333,13 @@ const handleTotal2 = () => {
 		summaryTotalPrice2.textContent = `$${payment2}/yr`
 	}
 }
+changeBtn2.addEventListener('click', () => {
+	slideNumber2 = 1
+	desktopForms.forEach(form => form.classList.remove('show-slide'))
+	desktopForms[1].classList.add('show-slide')
+	handleProgress()
+})
+
 
 desktopForwardBtn.addEventListener('click', e => {
 	e.preventDefault()

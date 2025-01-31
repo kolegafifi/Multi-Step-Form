@@ -68,6 +68,9 @@ input {
 		display: none;
 		flex-direction: column;
 	}
+	.mobile-slide2{
+		height: 505px;
+	}
 	&__controls {
 		position: absolute;
 		bottom: 0;
@@ -138,7 +141,7 @@ input {
 		justify-content: flex-start;
 		flex-direction: row;
 		width: 100%;
-		padding: 1.8em;
+		padding: 1.2em;
 		border: 2px solid $lightgray;
 		border-radius: 1em;
 		cursor: pointer;
@@ -153,11 +156,16 @@ input {
 		margin-inline-start: 2em;
 		gap: 0.7em;
 		h3 {
-			font-size: 1.8rem;
+			font-size: 1.6rem;
 		}
 		&__price {
 			font-size: 1.4rem;
 			color: $coolgray;
+		}
+		&__discount{
+			display: none;
+			color:$marineblue;
+			font-size: 1.4rem;
 		}
 	}
 	&__payment-options {
@@ -167,7 +175,6 @@ input {
 		flex-direction: row;
 		gap: 1.4em;
 		background-color: $alabaster;
-		margin-top: 1em;
 		padding: 1.4em;
 		border-radius: 1em;
 		&__slider {
