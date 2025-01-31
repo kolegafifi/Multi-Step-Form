@@ -1,0 +1,398 @@
+.attribution {
+	position: absolute;
+	bottom: 1em;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 1.2rem;
+}
+.desktop-form {
+	display: none;
+}
+input {
+	outline: none;
+}
+.form {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	&__container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	&__progress-items {
+		position: absolute;
+		top: 2em;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 1em;
+	}
+	&__progress-item {
+		width: 35px;
+		height: 35px;
+		border-radius: 50%;
+		border: 1px solid white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.6rem;
+		font-weight: bold;
+		color: white;
+	}
+	&__img {
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
+		img {
+			object-fit: cover;
+			width: 100%;
+		}
+	}
+	&__actual-form {
+		position: relative;
+		top: -12.5em;
+		width: 90%;
+		height: 495px;
+		background-color: $white;
+		max-width: 500px;
+		border-radius: 1.4em;
+		padding: 2.4em 2.8em;
+		box-sizing: border-box;
+		display: none;
+		flex-direction: column;
+	}
+	&__controls {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.4em 2.8em;
+		background-color: white;
+	}
+	&__back-btn {
+		border: none;
+		background-color: white;
+		color: $coolgray;
+		font-size: 1.6rem;
+		font-weight: bold;
+		cursor: pointer;
+		padding-block: 1.5em;
+		margin-block: -2em;
+	}
+	&__forward-btn {
+		color: white;
+		background-color: $marineblue;
+		border: none;
+		padding: 1em;
+		font-size: 1.6rem;
+		border-radius: 0.8em;
+		cursor: pointer;
+	}
+
+	// heading-text i p-text
+
+	&__heading-text {
+		font-size: 2.2rem;
+		color: $marineblue;
+		margin-bottom: 0.6em;
+	}
+	&__p-text {
+		font-size: 1.6rem;
+		color: $coolgray;
+		line-height: 1.4em;
+		margin-bottom: 1em;
+	}
+
+	// sekcja 1
+
+	&__label {
+		margin-block: 0.3em;
+		font-size: 1.6rem;
+		color: $marineblue;
+	}
+	&__input-text {
+		font-size: 1.6rem;
+		padding: 1em;
+		border-radius: 0.4em;
+		border: 1px solid $lightgray;
+		margin-bottom: 1em;
+	}
+	// sekcja 2
+	&__plans-box {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+	&__plan {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		flex-direction: row;
+		width: 100%;
+		padding: 1.8em;
+		border: 2px solid $lightgray;
+		border-radius: 1em;
+		cursor: pointer;
+		&:hover {
+			background-color: $magnolia;
+		}
+	}
+
+	&__plan-text {
+		display: flex;
+		flex-direction: column;
+		margin-inline-start: 2em;
+		gap: 0.7em;
+		h3 {
+			font-size: 1.8rem;
+		}
+		&__price {
+			font-size: 1.4rem;
+			color: $coolgray;
+		}
+	}
+	&__payment-options {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		flex-direction: row;
+		gap: 1.4em;
+		background-color: $alabaster;
+		margin-top: 1em;
+		padding: 1.4em;
+		border-radius: 1em;
+		&__slider {
+			width: 44px;
+			height: 22px;
+			background-color: black;
+			border-radius: 2em;
+			background-color: $marineblue;
+			display: flex;
+			align-items: center;
+			padding: 0.3em;
+			cursor: pointer;
+			&__ball {
+				height: 16px;
+				width: 16px;
+				background-color: $white;
+				border-radius: 50%;
+				position: relative;
+				transition: 0.3s;
+			}
+		}
+		&__option {
+			font-size: 1.4rem;
+			color: $coolgray;
+			font-weight: 500;
+			transition: 0.3s;
+		}
+	}
+	// slide 3
+	&__picks-box {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5em;
+	}
+	&__pick {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row;
+		border: 1px solid $lightgray;
+		padding: 1.5em;
+		border-radius: 0.5em;
+		cursor: pointer;
+
+		&__checkbox {
+			width: 20px;
+			height: 20px;
+			cursor: pointer;
+		}
+		&__text {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			h3 {
+				font-size: 1.5rem;
+				color: $marineblue;
+			}
+			p {
+				color: $coolgray;
+				font-size: 1.2rem;
+			}
+		}
+		&__price {
+			font-size: 1.3rem;
+		}
+	}
+	// slide 4 !!!!!!
+	&__summary {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		background-color: $alabaster;
+		padding: 1.6em;
+		border-radius: 1em;
+
+		&__plan-box {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		&__plan-text {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			&__picked-plan {
+				font-size: 1.5rem;
+				font-weight: bold;
+				color: $marineblue;
+			}
+			&__change-btn {
+				font-size: 1.4rem;
+				color: $coolgray;
+				text-decoration: underline;
+				padding: 0.8em 0.5em;
+				margin: -0.5em;
+				cursor: pointer;
+			}
+		}
+		&__plan-price {
+			font-size: 1.5rem;
+			color: $marineblue;
+			font-weight: bold;
+		}
+		&__line {
+			height: 1px;
+			width: 100%;
+			background-color: $lightgray;
+			margin-block: 1em;
+		}
+		&__services {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+		&__service {
+			display: none;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: row;
+			margin: 0.5em 0;
+
+			&__service-name {
+				font-size: 1.4rem;
+				color: $coolgray;
+			}
+			&__service-cost {
+				font-size: 1.4rem;
+				color: $marineblue;
+				font-weight: 500;
+			}
+		}
+		&__total {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: row;
+			margin-inline: 2em;
+			margin-top: 2em;
+		}
+		&__plan-total {
+			font-size: 1.5rem;
+			color: $coolgray;
+			font-weight: 500;
+		}
+		&__plan-total-price {
+			font-size: 1.6rem;
+			font-weight: bold;
+			color: $purplishblue;
+		}
+	}
+	// slide 5
+
+	&__thanks-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 4em 2em;
+		text-align: center;
+	}
+	&__thank-you {
+		font-size: 2.6rem;
+		color: $marineblue;
+		margin-top: 1em;
+	}
+	&__thanks-p {
+		font-size: 1.6rem;
+		line-height: 1.4em;
+		color: $coolgray;
+		margin-top: 1em;
+	}
+}
+.show-slide {
+	display: flex;
+}
+// progress item (aktywny dostaje ta klase, reszta ja traci)
+.active-progress-item {
+	background-color: $lightblue;
+	color: $marineblue;
+}
+
+// sekcja 1 (hided czyli ten back btn w slide1 jest niewidoczny, potem widoczny)
+.hided {
+	visibility: hidden;
+}
+// error inputa
+.error {
+	border: 1px solid $strawberryred;
+}
+
+.active-service {
+	display: flex;
+}
+
+.mobile-error {
+	border: 1px solid $strawberryred;
+}
+// slide 4 slajder z opcja pakietu rocznego lub miesiecznego
+.active-option {
+	color: $marineblue;
+}
+.monthly {
+	animation: monthly 0.3s forwards;
+}
+.yearly {
+	animation: yearly 0.3s forwards;
+}
+@keyframes monthly {
+	0% {
+		left: 2.2em;
+	}
+	100% {
+		left: 0em;
+	}
+}
+@keyframes yearly {
+	0% {
+		left: 0em;
+	}
+	100% {
+		left: 2.2em;
+	}
+}
+.picked-plan {
+	border: 2px solid $marineblue;
+	background-color: $magnolia;
+}

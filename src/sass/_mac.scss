@@ -1,0 +1,428 @@
+@media (min-width: 992px) {
+	.mobile-form {
+		display: none;
+	}
+	.desktop-form {
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		padding: 2.8em;
+		justify-content: center;
+		align-items: center;
+		background-color: $magnolia;
+		&__container {
+			position: relative;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			max-width: 1000px;
+			width: 100%;
+			height: 600px;
+			background-color: red;
+			padding: 1.6em;
+			border-radius: 1.8em;
+			background-color: white;
+		}
+		&__hero-img {
+			position: relative;
+			width: 274px;
+			height: 100%;
+			overflow: hidden;
+			border-radius: 1.4em;
+			img {
+				object-fit: cover;
+			}
+		}
+		&__progress-items {
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+			top: 5em;
+			left: 3em;
+			gap: 2em;
+		}
+		&__progress-box {
+			display: flex;
+			align-items: center;
+			width: 200px;
+			gap: 2em;
+		}
+		&__progress-item {
+			border: 1px solid $white;
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			font-size: 1.6rem;
+			font-weight: bold;
+		}
+		&__progress-text {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			text-transform: uppercase;
+			gap: 0.4em;
+			color: white;
+			&__title {
+				font-size: 1.2rem;
+				font-weight: 100;
+			}
+			&__p {
+				font-size: 1.4rem;
+				font-weight: bold;
+			}
+		}
+		&__actual-form-container {
+			position: relative;
+			max-width: 600px;
+			width: 100%;
+			height: 100%;
+			padding: 4em 2em;
+			padding-inline-end: 9em;
+		}
+		&__actual-form {
+			display: none;
+			position: relative;
+			width: 100%;
+			height: 100%;
+
+			&__title {
+				font-size: 3.2rem;
+				color: $marineblue;
+				margin-bottom: 0.3em;
+			}
+			&__p {
+				color: $coolgray;
+				font-size: 1.6rem;
+				margin-bottom: 2em;
+			}
+		}
+
+		// sekcja 1
+
+		&__label-box {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row;
+			width: 100%;
+			margin-bottom: 0.8em;
+			padding-inline: 0.2em;
+			label {
+				font-size: 1.6rem;
+			}
+			&__error {
+				visibility: hidden;
+				font-weight: bold;
+				color: $strawberryred;
+				font-size: 1.4rem;
+			}
+		}
+		&__input-text {
+			width: 100%;
+			padding: 1em;
+			border-radius: 0.6em;
+			font-size: 1.6rem;
+			border: 1px solid $lightgray;
+			margin-bottom: 1.8em;
+			outline: none;
+		}
+		&__controls {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: absolute;
+			bottom: 3em;
+			width: 81.5%;
+		}
+		&__back-btn {
+			color: $coolgray;
+			font-size: 1.6rem;
+			font-weight: 400;
+			padding: 1em;
+			margin: -1em;
+			cursor: pointer;
+			&:hover {
+				color: #868686;
+			}
+		}
+		&__forward-btn {
+			padding: 1em 1.4em;
+			background-color: $marineblue;
+			color: $white;
+			font-size: 1.6rem;
+			border-radius: 0.6em;
+			cursor: pointer;
+			&:hover {
+				background-color: hsl(213, 95%, 26%);
+			}
+		}
+
+		// sekcja 2
+		&__plans {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: row;
+		}
+		&__plans-box {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			width: 30%;
+			height: 170px;
+			border-radius: 1.2em;
+			padding: 2em 1.6em;
+			border: 2px solid $lightgray;
+			cursor: pointer;
+			img {
+				width: 40px;
+				height: 40px;
+			}
+			&__title {
+				font-size: 1.8rem;
+				color: $marineblue;
+				margin-bottom: 0.2em;
+			}
+			&__price {
+				font-size: 1.4rem;
+				color: $coolgray;
+			}
+		}
+		&__choose-payment {
+			width: 100%;
+			padding: 1.2em;
+			border-radius: 1.2em;
+			background-color: $magnolia;
+			margin-top: 3em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 2em;
+			&__option {
+				font-size: 1.4rem;
+				font-weight: 500;
+				color: $coolgray;
+			}
+			&__slider {
+				width: 44px;
+				height: 22px;
+				border-radius: 2em;
+				background-color: $marineblue;
+				display: flex;
+				align-items: center;
+				transition: 0.3s;
+				cursor: pointer;
+			}
+			&__ball {
+				position: relative;
+				left: 0.25em;
+				width: 14px;
+				height: 14px;
+				border-radius: 50%;
+				background-color: white;
+				transition: 0.3s;
+			}
+		}
+
+		// sekcja 3
+
+		&__add-ons {
+			display: flex;
+			flex-direction: column;
+			gap: 1.5em;
+		}
+		&__add-on {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 2.5em 2em;
+			border: 1px solid $lightgray;
+			border-radius: 1em;
+			cursor: pointer;
+
+			&:hover {
+				border: 1px solid $purplishblue;
+			}
+			input {
+				height: 20px;
+				width: 20px;
+				cursor: pointer;
+			}
+			&__text {
+				display: flex;
+				justify-content: space-between;
+				flex-direction: column;
+				flex-grow: 1;
+				margin-left: 3em;
+				gap: 0.2em;
+				h3 {
+					font-size: 1.6rem;
+					color: $marineblue;
+				}
+				p {
+					font-size: 1.4rem;
+					color: $coolgray;
+				}
+			}
+			&__price {
+				font-size: 1.6rem;
+				color: $purplishblue;
+			}
+		}
+		&__price {
+			white-space: nowrap;
+			margin-left: 1em;
+		}
+		// sekcja 4
+
+		&__summary-container {
+			display: flex;
+			flex-direction: column;
+			padding: 2em 1.4em;
+			background-color: $alabaster;
+			border-radius: 1.4em;
+			margin-bottom: 2em;
+		}
+		&__plan-box {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: row;
+		}
+		&__plan-summary {
+			display: flex;
+			flex-direction: column;
+			gap: 0.2em;
+			&__chosen-plan {
+				font-size: 1.8rem;
+				font-weight: 500;
+				color: $marineblue;
+			}
+			&__change-btn {
+				font-size: 1.4rem;
+				color: $coolgray;
+				text-decoration: underline;
+			}
+		}
+		&__summary-plan-price {
+			font-size: 1.6rem;
+			font-weight: 500;
+			color: $marineblue;
+		}
+		&__hr {
+			width: 100%;
+			height: 1px;
+			background-color: $lightgray;
+			margin-block: 2em;
+		}
+		&__summary-add-ons {
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+		}
+		&__summary-add-on {
+			display: none;
+			justify-content: space-between;
+			align-items: center;
+			&__name {
+				font-size: 1.4rem;
+				color: $coolgray;
+			}
+			&__price {
+				font-size: 1.5rem;
+				color: $marineblue;
+			}
+		}
+		.active-service2 {
+			display: flex ;
+		}
+		&__summary-total {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-inline: 2em;
+			&__p {
+				font-size: 1.4rem;
+				color: $coolgray;
+			}
+			&__total-payment {
+				font-size: 2rem;
+				color: $purplishblue;
+				font-weight: 500;
+			}
+		}
+		// slide 5
+
+		&__thanks-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			height: 100%;
+			img {
+				margin-bottom: 2.5em;
+			}
+			h2 {
+				font-size: 3.2rem;
+				color: $marineblue;
+				margin-bottom: 0.5em;
+			}
+			p {
+				font-size: 1.6rem;
+				color: $coolgray;
+				text-align: center;
+			}
+			.mailto {
+				color: $marineblue;
+			}
+		}
+	}
+	.active-progress-item {
+		background-color: $lightblue;
+		color: $marineblue;
+	}
+	.show-slide {
+		display: block;
+	}
+	.show-error {
+		visibility: visible;
+	}
+	.error {
+		border: 1px solid $strawberryred;
+	}
+	.active-option {
+		color: $marineblue;
+	}
+	.monthly2 {
+		animation: monthly 0.3s forwards;
+	}
+	.yearly2 {
+		animation: yearly 0.3s forwards;
+	}
+	.picked-plan2{
+		border: 2px solid $marineblue;
+		background-color: $magnolia;
+	}
+	@keyframes monthly {
+		0% {
+			left: 2.2em;
+		}
+		100% {
+			left: 0.4em;
+		}
+	}
+	@keyframes yearly {
+		0% {
+			left: 0.4em;
+		}
+		100% {
+			left: 2.6em;
+		}
+	}
+	.checked-option {
+		background-color: $alabaster;
+	}
+}

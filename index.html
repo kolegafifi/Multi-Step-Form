@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./dist/img/favicon-32x32.png">
+
+  <title>Frontend Mentor | Multi-step form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./dist/css/style.min.css">
+</head>
+
+<body>
+
+  <div class="form mobile-form">
+    <div class="form__container">
+      <div class="form__img">
+        <img src="./dist/img/bg-sidebar-mobile.svg" alt="">
+      </div>
+      <div class="form__progress-items">
+        <div class="form__progress-item progress-item1 ">1</div>
+        <div class="form__progress-item progress-item2">2</div>
+        <div class="form__progress-item progress-item3">3</div>
+        <div class="form__progress-item progress-item4">4</div>
+      </div>
+      <div class="form__actual-form mobile-slide1 show-slide">
+        <h1 class="form__heading-text">Personal Info</h1>
+        <p class="form__p-text">Please provide your name, email address, and phone number.</p>
+        <label for="" class="form__label">Name</label>
+        <input type="text" class="form__input-text input-email" placeholder="e.g. Millie Brown" id="mobile-name">
+        <label for="" class="form__label">Email Address</label>
+        <input type="email" class="form__input-text input-email" placeholder="e.g. milliebb@gmail.com"
+          id="mobile-email">
+        <label for="" class="form__label">Phone Number</label>
+        <input type="text" name="" class="form__input-text input-tel" placeholder="e.g. +48 123-456-789"
+          id="mobile-number">
+      </div>
+
+
+      <div class="form__actual-form mobile-slide2">
+        <h1 class="form__heading-text">Select your plan</h1>
+        <p class="form__p-text">You have the option of monthly or yearly billing.</p>
+        <div class="form__plans-box">
+          <div class="form__plan plan1 picked-plan">
+            <img src="./dist/img/icon-arcade.svg" alt="plan-icon">
+            <div class="form__plan-text">
+              <h3 class="plan-title">Arcade</h3>
+              <p class="form__plan-text__price plan-price1">$9/mo</p>
+            </div>
+          </div>
+          <div class="form__plan plan2">
+            <img src="./dist/img/icon-advanced.svg" alt="plan-icon">
+            <div class="form__plan-text">
+              <h3 class="plan-title">Advanced</h3>
+              <p class="form__plan-text__price plan-price2">$12/mo</p>
+            </div>
+          </div>
+          <div class="form__plan plan3">
+            <img src="./dist/img/icon-pro.svg" alt="plan-icon">
+            <div class="form__plan-text">
+              <h3 class="plan-title">Pro</h3>
+              <p class="form__plan-text__price plan-price3">$15/mo</p>
+            </div>
+          </div>
+          <div class="form__payment-options">
+            <p class="form__payment-options__option active-option">Monthly</p>
+            <div class="form__payment-options__slider">
+              <div class="form__payment-options__slider__ball monthly"></div>
+            </div>
+            <p class="form__payment-options__option">Yearly</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form__actual-form mobile-slide3">
+        <h1 class="form__heading-text">Pick add-ons</h1>
+        <p class="form__p-text">Add-ons help enhance your gaming experience.</p>
+        <div class="form__picks-box">
+          <div class="form__pick pick1">
+            <input type="checkbox" name="" id="online-check" class="form__pick__checkbox pick-checkbox1">
+            <div class="form__pick__text">
+              <h3>Online Service</h3>
+              <p>Unlock Multiplayer games</p>
+            </div>
+            <p class="form__pick__price">+$1/mo</p>
+          </div>
+          <div class="form__pick pick2">
+            <input type="checkbox" name="" id="storage-check" class="form__pick__checkbox pick-checkbox1">
+            <div class="form__pick__text">
+              <h3>Larger storage</h3>
+              <p>Extra 1TB of cloud save</p>
+            </div>
+            <p class="form__pick__price">+$2/mo</p>
+          </div>
+          <div class="form__pick pick3">
+            <input type="checkbox" name="" id="profile-check" class="form__pick__checkbox pick-checkbox1">
+            <div class="form__pick__text">
+              <h3>Customizable profile</h3>
+              <p>Custom profile theme</p>
+            </div>
+            <p class="form__pick__price">+$2/mo</p>
+          </div>
+        </div>
+      </div>
+      <div class="form__actual-form mobile-slide4 ">
+        <h1 class="form__heading-text">Finishing up</h1>
+        <p class="form__p-text">Double-check everything looks OK before confirming</p>
+        <div class="form__summary">
+          <div class="form__summary__plan-box">
+            <div class="form__summary__plan-text">
+              <p class="form__summary__plan-text__picked-plan">Arcade (Monthly)</p>
+              <p class="form__summary__plan-text__change-btn">Change</p>
+            </div>
+            <p class="form__summary__plan-price">
+              $9/mo
+            </p>
+          </div>
+          <div class="form__summary__line"></div>
+          <div class="form__summary__services">
+            <div class="form__summary__service">
+              <p class="form__summary__service__service-name">Online service</p>
+              <p class="form__summary__service__service-cost"> +$1/mo</p>
+            </div>
+            <div class="form__summary__service">
+              <p class="form__summary__service__service-name">Larger Storage</p>
+              <p class="form__summary__service__service-cost"> +$2/mo</p>
+            </div>
+            <div class="form__summary__service">
+              <p class="form__summary__service__service-name">Customizable Profile</p>
+              <p class="form__summary__service__service-cost"> +$2/mo</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="form__summary__total">
+          <p class="form__summary__plan-total">Total (per month)</p>
+          <p class="form__summary__plan-total-price">+$12/mo</p>
+        </div>
+      </div>
+      <div class="form__actual-form mobile-slide5">
+        <div class="form__thanks-container">
+          <img src="./dist/img/icon-thank-you.svg" alt="thank you icon">
+          <h2 class="form__thank-you">Thank you!</h2>
+          <p class="form__thanks-p">Thanks for confirming your subscription! We hope you have fun using our platform. If
+            you ever need support please feel free to email us at support@loremgaming.com.</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="form__controls">
+      <button class="form__back-btn">Go Back</button>
+      <button class="form__forward-btn">Next Step</button>
+    </div>
+  </div>
+
+  <!-- ############################################################################################################## -->
+
+  <div class="desktop-form">
+    <div class="desktop-form__container">
+      <div class="desktop-form__hero-img">
+        <img src="./dist/img/bg-sidebar-desktop.svg" alt="">
+        <div class="desktop-form__progress-items">
+          <div class="desktop-form__progress-box">
+            <div class="desktop-form__progress-item active-progress-item">1</div>
+            <div class="desktop-form__progress-text">
+              <p class="desktop-form__progress-text__title">step 1</p>
+              <p class="desktop-form__progress-text__p">your info</p>
+            </div>
+          </div>
+          <div class="desktop-form__progress-box">
+            <div class="desktop-form__progress-item">2</div>
+            <div class="desktop-form__progress-text">
+              <p class="desktop-form__progress-text__title">step 2</p>
+              <p class="desktop-form__progress-text__p">select plan</p>
+            </div>
+          </div>
+          <div class="desktop-form__progress-box">
+            <div class="desktop-form__progress-item">3</div>
+            <div class="desktop-form__progress-text">
+              <p class="desktop-form__progress-text__title">step 3</p>
+              <p class="desktop-form__progress-text__p">add-ons</p>
+            </div>
+          </div>
+          <div class="desktop-form__progress-box">
+            <div class="desktop-form__progress-item">4</div>
+            <div class="desktop-form__progress-text">
+              <p class="desktop-form__progress-text__title">step 4</p>
+              <p class="desktop-form__progress-text__p">summary</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="desktop-form__actual-form-container">
+        <div class="desktop-form__actual-form desktop-slide1 show-slide">
+          <h1 class="desktop-form__actual-form__title">Personal Info</h1>
+          <p class="desktop-form__actual-form__p">Please provide your name, e-mail, and phone number.</p>
+
+          <div class="desktop-form__form-box">
+            <div class="desktop-form__label-box">
+              <label for="">Name</label>
+              <p class="desktop-form__label-box__error">This field is requested</p>
+            </div>
+            <input type="text" name="" id="desktop-name" class="desktop-form__input-text"
+              placeholder="e.d. Millie Brown">
+            <div class="desktop-form__label-box">
+              <label for="">Email Address</label>
+              <p class="desktop-form__label-box__error">This field is requested</p>
+            </div>
+            <input type="text" name="" id="desktop-mail" class="desktop-form__input-text"
+              placeholder="e.d. milliebb@gmail.com">
+            <div class="desktop-form__label-box">
+              <label for="">Phone Number</label>
+              <p class="desktop-form__label-box__error">This field is requested</p>
+            </div>
+            <input type="text" name="" id="desktop-number" class="desktop-form__input-text"
+              placeholder="e.d. +1 576-900-4808">
+          </div>
+        </div>
+
+        <div class="desktop-form__actual-form desktop-slide2">
+          <h1 class="desktop-form__actual-form__title">Select your plan</h1>
+          <p class="desktop-form__actual-form__p">You have the option of monthly or yearly billing.</p>
+
+          <div class="desktop-form__plans">
+            <div class="desktop-form__plans-box picked-plan2">
+              <img src="./dist/img/icon-arcade.svg" alt="">
+              <div class="desktop-form__plans-box__text">
+                <h3 class="desktop-form__plans-box__title">Arcade</h3>
+                <p class="desktop-form__plans-box__price">$9/mo</p>
+              </div>
+            </div>
+            <div class="desktop-form__plans-box">
+              <img src="./dist/img/icon-advanced.svg" alt="">
+              <div class="desktop-form__plans-box__text">
+                <h3 class="desktop-form__plans-box__title">Advanced</h3>
+                <p class="desktop-form__plans-box__price">$12/mo</p>
+              </div>
+            </div>
+            <div class="desktop-form__plans-box">
+              <img src="./dist/img/icon-pro.svg" alt="">
+              <div class="desktop-form__plans-box__text">
+                <h3 class="desktop-form__plans-box__title">Pro</h3>
+                <p class="desktop-form__plans-box__price">$15/mo</p>
+              </div>
+            </div>
+          </div>
+          <div class="desktop-form__choose-payment">
+            <p class="desktop-form__choose-payment__option monthly-option active-option">Monthly</p>
+            <div class="desktop-form__choose-payment__slider">
+              <div class="desktop-form__choose-payment__ball monthly2"></div>
+            </div>
+            <p class="desktop-form__choose-payment__option yearly-option">Yearly</p>
+          </div>
+
+
+        </div>
+        <div class="desktop-form__actual-form desktop-slide3">
+          <h1 class="desktop-form__actual-form__title">Pick add-ons</h1>
+          <p class="desktop-form__actual-form__p">Add-ons can help enhance your gaming experience.</p>
+
+          <div class="desktop-form__add-ons">
+            <div class="desktop-form__add-on">
+              <input type="checkbox" name="" id="online-service1" class="desktop-form__checkbox">
+              <div class="desktop-form__add-on__text">
+                <h3>Online Service</h3>
+                <p>Access to multiplayer games</p>
+              </div>
+              <p class="desktop-form__add-on__price">+$1/mo</p>
+            </div>
+            <div class="desktop-form__add-on checked">
+              <input type="checkbox" name="" id="online-service2" class="desktop-form__checkbox">
+              <div class="desktop-form__add-on__text">
+                <h3>Larger Storage</h3>
+                <p>Extra 1TB of cloud save</p>
+              </div>
+              <p class="desktop-form__add-on__price">+$2/mo</p>
+            </div>
+            <div class="desktop-form__add-on">
+              <input type="checkbox" name="" id="online-service3" class="desktop-form__checkbox">
+              <div class="desktop-form__add-on__text">
+                <h3>Customizable profile</h3>
+                <p>Custom theme on your profile</p>
+              </div>
+              <p class="desktop-form__add-on__price">+$2/mo</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="desktop-form__actual-form desktop-slide4">
+          <h1 class="desktop-form__actual-form__title">Finishing up</h1>
+          <p class="desktop-form__actual-form__p">Double-check everything looks OK before confirming.</p>
+
+          <div class="desktop-form__summary-container">
+            <div class="desktop-form__plan-box">
+              <div class="desktop-form__plan-summary">
+                <h3 class="desktop-form__plan-summary__chosen-plan">Arcade(Monthly)</h3>
+                <p class="desktop-form__plan-summary__change-btn">Change</p>
+              </div>
+              <p class="desktop-form__summary-plan-price">$9/mo</p>
+            </div>
+            <div class="desktop-form__hr"></div>
+            <div class="desktop-form__summary-add-ons">
+              <div class="desktop-form__summary-add-on">
+                <p class="desktop-form__summary-add-on__name">Online service</p>
+                <p class="desktop-form__summary-add-on__price">+$1/mo</p>
+              </div>
+              <div class="desktop-form__summary-add-on">
+                <p class="desktop-form__summary-add-on__name">Larger storage</p>
+                <p class="desktop-form__summary-add-on__price">+$2/mo</p>
+              </div>
+              <div class="desktop-form__summary-add-on">
+                <p class="desktop-form__summary-add-on__name">Customizable Profile</p>
+                <p class="desktop-form__summary-add-on__price">+$2/mo</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="desktop-form__summary-total">
+            <p class="desktop-form__summary-total__p">Total (per month)</p>
+            <p class="desktop-form__summary-total__total-payment">+$12/mo</p>
+          </div>
+
+        </div>
+        <div class="desktop-form__actual-form desktop-slide5">
+
+          <div class="desktop-form__thanks-container">
+            <img src="./dist/img/icon-thank-you.svg" alt="">
+            <h2>Thank you!</h2>
+            <p>Thanks for confirming your subsciption! We hope you have fun using our platform. If you ever need
+              support, please feel free to email us at <a class="mailto"
+                href="mailto:support@loremgaming.com">support@loremgaming.com</a>.</p>
+          </div>
+
+        </div>
+        <div class="desktop-form__controls">
+          <p class="desktop-form__back-btn">Go Back</p>
+          <p class="desktop-form__forward-btn">Next Step</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- <div class="attribution">
+    Coded by <a href="https://www.instagram.com/kolegafifi/" target="_blank">Filip Wawrzyniak</a>.
+  </div> -->
+
+  <script src="./dist/js/script.min.js"></script>
+  <script src="./dist/js/script-desktop.min.js"></script>
+</body>
+
+</html>
